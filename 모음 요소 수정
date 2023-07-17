@@ -1,0 +1,67 @@
+'''
+리스트
+'''
+score=[70,80,90];
+score.append(40); # 마지막 요소로 데이터 추가
+print(score);
+score.insert(3,20); # 원하는 위치에 데이터 추가
+print(score);
+score.pop(0); # 원하는 위치의 데이터 삭제(위치 미지정 시 마지막 데이터 삭제)
+print(score);
+del(score[2:4]); # 지정 위치 또는 범위 삭제
+print(score);
+score.clear(); # 모든 요소 삭제
+print(score);
+
+bag = ['pen', 'eraser', 'pencil', 'ruler'];
+bag[1] = 'book'; # 데이터 변경
+print(bag);
+bag[0:2] = ['phone', 'pin']; # 범위 지정 데이터 변경
+print(bag);
+bag.reverse(); # 리스트 뒤집기
+print(bag);
+
+'''
+튜플
+- 리스트와 거의 유사하나 저용량, 고속, 데이터 수정 불가
+'''
+a=(1,2,3,4,5);
+b=1,2,3,4,5;
+print(a+b); # 두 튜플 병합
+print(a*3); # 튜플 반복 
+print(a[::2]); #튜플 범위 지정(시작:끝:간격)
+a=a+(6,); # 마지막 요소로 데이터 추가
+print(a);
+
+'''
+dict 
+- key(중복,수정 불가 독립변수), value(중복,수정 가능 종속변수) 한 쌍의 대응 관계
+- 산술연산 불가
+'''
+dic={'name':'gini', 'age':21, 'birth':'030327'};
+dic['blood'] = 'AB'; # 마지막 쌍 추가
+print(dic);
+del dic['age']; # 쌍 삭제
+print(dic);
+print('name' in dic); # 쌍 조회
+print(dic.keys()); # 쌍 좌변 나열
+print(dic.values()); # 쌍 우변 나열
+print(dic.items()); # 쌍으로 나열
+print(dic.clear()); # 모든 쌍 삭제
+
+'''
+set
+- 합집합, 교집합, 차집합 등 연산 가능한 집합
+- 중복값 불허, 순서 존재x -> 인덱싱, 슬라이싱 불가, in 연산자로 값 조회
+'''
+s=set();
+s.add('d') # 마지막 요소 추가
+print(s);
+s.remove('d'); # 요소 삭제
+print(s)
+s.clear(); # 모든 요소 삭제
+print(s);
+
+a={'a','b'};
+b={1,2};
+print(a.union(b)); # 두 세트 병합
