@@ -1,0 +1,37 @@
+'''
+모음 - list[], tuple(), dict{:}, set{}
+# list
+a1=[];
+print(type(a1));
+a1.append(10); # 추가
+print(a1);
+a1.insert(1,30); # 삽입
+print(a1);
+a1.pop(2); # 삭제
+print(a1);
+a1[1]=20; # 변환
+print(a1);
+a2=[23,2,546,12,3]; # 오름차순 정렬
+'''print(a2.sort());'''
+a2.sort();
+print(a2);
+
+# tuple
+b1=(23,34,45,56,76);
+print(type(b1));
+b2=(10,);
+print(type(b2));
+b3=('wef',12,23.56);
+print(type(b3));
+
+# dict
+c1={'df':[23,24], 'sdf':[45,56], 'wer':[54,98]};
+print(type(c1));
+# set
+d1={1,2,3,4,5};
+d2={6,7,8,9,10};
+print(d1|d2); # 합집합
+print(d1.union(d2));
+print(d1&d2); # 교집합
+print(d1.intersection(d2));
+print(d1.difference(d2)); #차집합
