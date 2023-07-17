@@ -1,0 +1,27 @@
+# 관계연산자(크다, 작다, 크거나 같다, 작거나 같다, 같다, 같지 않다)
+a=10;
+b=20;
+print(a>b); # False
+print(a<b); # True
+print(a==b); # False
+print(a!=b); # True
+
+# 논리연산자(and, or, not)
+print(True and True);
+print(False or True);
+print(not False); # all True
+
+# 비트연산자
+print(bin(a));
+print(bin(b));
+bitand=a&b; print(bitand); # & : 대응되는 비트가 모두 1이면 1(bit and)
+bitor=a|b; print(bitor); # | : 대응되는 비트 중 하나라도 1이면 1(bit or)
+bitxor=a^b; print(bitxor); # ^ : 대응되는 비트가 서로 다르면 1(bit xor)
+bitnot=~b; print(bitnot); # ~ : 비트 반전(bit not)
+rightshift=a>>2; print(rightshift); # >> : 지정한 수만큼 전부 오른쪽으로 이동(오른쪽 shift)
+leftshift=a<<3; print(leftshift); # << : 지정한 수만큼 전부 왼쪽으로 이동(왼쪽 shift)
+
+# 삼항연산자(조건)
+print("더 큰 수 : ", a if a>b else b);
+com=int(input("숫자 입력 -> "));
+print("짝수") if com%2==0 else print("홀수");
