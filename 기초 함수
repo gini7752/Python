@@ -2,14 +2,19 @@
 print()
 '''
 
+
 '''
 input()
 '''
 
 '''
 format()
+"command{}".format(index)
 '''
+
 
 '''
 casting()
 '''
+
+->day03 끌어모아서 정리
