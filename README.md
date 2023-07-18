@@ -1,5 +1,6 @@
 # Python
 ## tool : pycharm commmunity edition 2023.1.3
+## technical questions : stack overflow
 ## File->New project->File location setting->New Window
 ### day 01 :
 ### day 02 :
