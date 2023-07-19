@@ -1,20 +1,41 @@
 '''
 print()
 '''
-
+print("hello"+"world"); print("h""i"); # 띄어쓰기 없이
+print("hello "+"world");
+print("hello","world"); # 띄어쓰기
 
 '''
 input()
+문자열 입력받는 함수
 '''
+a = input("-> "); # 중지하고 싶으면 우측 상단 중지 버튼
+print('{}를 입력하셨습니다.'.format(a));
 
 '''
 format()
 "command{}".format(index)
 '''
+age = 20;
+name = '홍길동';
+ment = 'name : {1}, age : {0}'.format(age,name);
+print(ment);
 
 
 '''
 casting()
+형 변환(int(정수), float(실수), complex(복소수 j), str(문자열), bool(논리))
++ 10진수 변환(bin(2진수), oct(8진수), hex(16진수))
 '''
+a=1;
+print(bool(a));
+b="2";
+intb=int(b);
+print(type(intb));
 
-->day03 끌어모아서 정리
+chr_a=65
+print(chr_a, type(chr_a)); # chr : ascii 코드 변환값, 유니코드값(ascii 코드표 참고)
+
+
+
+
