@@ -45,3 +45,5 @@ while i<len(a):
         sum = sum + a[i];
     i = i + 1;
 print(sum);
+
+# 무한 루프 : while True : 
