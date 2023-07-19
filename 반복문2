@@ -1,0 +1,46 @@
+'''
+for문
+for 변수 in range(초기식, 조건식-1, 증감식):
+    수행문
+'''
+for i in range(1,11,1): # 증감식 생략 시 자동으로 1씩 증가
+    print(i);
+
+# 1~100 내의 짝수 출력
+for i in range(1, 101, 1):
+    if i%2==0:
+        print(i);
+
+for i in range(2, 101, 2):
+    print(i);
+
+'''
+for 반복변수 in 리스트:
+    수행문
+'''
+list=['df','dfg','fg'];
+for i in list:
+    print(i);
+
+score=[68,78,89,90,100];
+print("합격컷은 85점");
+num=0;
+for i in score:
+    num=num+1;
+    if i>85:
+        print('{}번 학생은 {}점이므로 합격'.format(num, i));
+    else:
+        print('{}번 학생은 {}점이므로 불합격'.format(num, i));
+
+'''
+이중 for문
+for 변수 in range:
+    for 변수 in range:
+        수행문
+'''
+for i in range(2,10):
+    for j in range(1,10):
+        print("{}*{}={}".format(i,j,i*j));
+
+# for문에서는 range 함수에 항상 끝식이 필요하기 때문에 무한 루프 생성 불가
+# 구하고자 하는 값의 조건이 무엇인지 정확히 알 경우 사용 -> 초기값, 조건식, 증감식 바로 탐색 가능(가독성)
