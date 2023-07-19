@@ -10,9 +10,9 @@ print("hello"+"world"); print("h""i"); # 띄어쓰기 없이
 print("hello "+"world");
 print("hello","world"); # 띄어쓰기
 
-print("python","java","C", sep='   and  ')
-print("python", "java", end=" ")
-print("C")
+print("python","java","C", sep='   and  ');
+print("python", "java", end=" ");
+print("C");
 
 '''
 input()
