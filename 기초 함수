@@ -1,9 +1,18 @@
 '''
 print()
+출력 함수
+sep : 여러 데이터에 대하여 sep라는 속성으로 나란히 출력
+    => 문자열들 사이에 뭐 추가할래(띄어쓰기, 다른 문자열 등)
+end : 줄바꿈(end에 /n 자동 설정) 속성
+    =>enter 취소하기
 '''
 print("hello"+"world"); print("h""i"); # 띄어쓰기 없이
 print("hello "+"world");
 print("hello","world"); # 띄어쓰기
+
+print("python","java","C", sep='   and  ')
+print("python", "java", end=" ")
+print("C")
 
 '''
 input()
