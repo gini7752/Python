@@ -52,3 +52,17 @@ def subject(**kwargs):
         print(kw,' : ',arg, sep='');
 
 subject(subject1='java',subject2='jsp',subject3='spring');
+
+#args, kwargs 비교
+def multi_sum(*args):
+    print(type(args));
+    num=len(args);
+    print("입력 변수 개수 : ", str(num)+"개");
+    
+multi_sum(1,23,323,46,47,78,5,23,4,4354,4,6,6,6,7,7,7,5);
+
+def savedic(**kwargs):
+    print(type(kwargs));
+    print(kwargs);
+
+savedic(a=1,b=2,c=3,d=4);
