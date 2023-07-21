@@ -1,0 +1,60 @@
+'''
+function : def 키워드를 사용하여 정의
+def 함수면(매개변수) :
+    문장
+    return 값
+
+- 매개변수(parameter) : 함수 호출할 때 인수로 전달된 값을 함수 내에서 사용할 수 있게 해주는 변수
+함수사용 => 가독성, 편리성, 관리수월성, 재사용성
+'''
+def add2(a,b,c):
+    avg=(a+b+c)/3;
+    return avg; # 함수가 호출될 때 실행결과 반환
+
+a=10; b=20; c=30;
+print(add2(a,b,c));
+
+def abs_fc(num):
+    if num>0:
+        abs = num;
+    else :
+        abs=-num;
+    return abs;
+
+num=int(input("정수 입력 : "));
+print("절댓값 : ", abs_fc(num));
+
+'''
+return
+없을 수도, 하나, 여러 값일 수도 있다
+없는 함수 -> none
+하나의 객체만 반환 가능
+파이썬만 리스트, 튜플, 딕셔너리 등의 자료형에 여러 값을 담아 반환 가능
+'''
+def returntest(v):
+    return 20,10;
+
+def turnnone(v):
+    x=v;
+
+def turnvalue(v):
+    x=v*10;
+    return x;
+
+def turnset(v):
+    x={v,v+1,v+2};
+    return x;
+
+def turntuple(v):
+    return v,v-1,v-2;
+
+print(returntest(1), turnnone(1), turnvalue(1), turnset(1), turntuple(1));
+
+'''
+매개변수 기본값 할당 -> 함수 호출 시 생략 가능
+'''
+def report(message, who='everyone'):
+    print(message, who);
+
+report('good morning'); # who에 'everyone'이라는 기본값 할당
+
