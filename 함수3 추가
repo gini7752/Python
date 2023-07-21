@@ -1,0 +1,54 @@
+'''
+가변인자
+입력값이 여러개일 때 사용(튜플 출력)
+매개변수의 수가 많아지면 가변인자가 효율성을 높여준다
+args 말고 어떤 변수명도 상관없지만 가독성을 위해 args(arguments) 사용 권장
+=> 가변인자 함수는 매개변수의 수를 모를 때 사용
+
+def a(*args):
+    print()
+'''
+def add_many(*v):
+    sum=0;
+    for i in v:
+        sum+=i;
+    return sum;
+
+print(add_many(1, 2, 3, 4, 5, 6, 7, 8, 9));
+
+def calc(operator, *args):
+    if operator == '+':
+        sum=0;
+        for i in args:
+            sum+=i;
+    elif operator=='*':
+        sum=1;
+        for i in args:
+            sum*=i;
+    return sum;
+
+print(calc('*',1,2,3,4,5));
+
+def myfunc(*args):
+    for arg in args:
+        print(arg);
+
+myfunc(10,'a',1.0,True);
+
+'''
+키워드 가변인자
+개수불명의 딕셔너리 자료형을 입력 인수로 받아 딕셔너리 출력
+(key=value) 형태로 호출 가능, 역시 가독성을 위해 kwargs 사용 권장
+def a(**kwargs):
+    print()
+'''
+def nameage(**kwargs):
+    print(kwargs);
+
+nameage(name='gini', age=20);
+
+def subject(**kwargs):
+    for kw, arg in kwargs.items():
+        print(kw,' : ',arg, sep='');
+
+subject(subject1='java',subject2='jsp',subject3='spring');
