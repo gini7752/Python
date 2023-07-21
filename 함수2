@@ -1,0 +1,34 @@
+'''
+method : 특정 개체를 통해서만 호출 가능한 함수
+함수와 차이점 : 독립적으로 정의되지 않아 이름으로만 호출 불가, 정의된 클래스의 참조에 의해 호출
+class.method()
+'''
+# count() : 문자열 내부의 특정 문자열 개수 반환(대소문자 구분)
+str='helloworld';
+print(str.count('l'));
+
+# find() : 문자열 내부의 첫번째로 나오는 특정 문자열 위치 반환(없을 경우 -1)
+print(str.find('l'));
+print(str.find('l',4)); # (찾는 문자열, 몇번째부터 찾을 것인지)
+
+# index() : find()와 유사하나 특정 문자열 없을 경우 에러 발생
+
+# upper() : 모두 대문자로
+# lower() : 모두 소문자로
+# capitalize() : 첫 글자만 대문자, 나머지는 소문자로
+str="Hello Python";
+print(str.upper());
+print(str.lower());
+print(str.capitalize());
+
+# join() : 객체 각 요소 사이에 문자열 포함
+print('-'.join('python'));
+print('+'.join(['a','b','c']));
+
+# split() : 공백 기준 문자열 분리하여 리스트 반환(특정 기준 문자열 지정 가능)
+str="life is too short";
+print(str.split());
+num="010-9556-7754";
+print(num.split('-'));
+a, b=input("입력: ").split();
+print(a); print(b);
