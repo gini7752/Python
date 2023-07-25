@@ -45,6 +45,9 @@ print(type(intb));
 chr_a=65
 print(chr_a, type(chr_a)); # chr : ascii 코드 변환값, 유니코드값(ascii 코드표 참고)
 
+numlist=list(map(int, input("정수 5개 입력 : ").split()));
+print(numlist); # 입력받은 문자열을 띄어쓰기를 기준으로 요소 분리하여 리스트로 반환
+
 
 
 
