@@ -1,0 +1,45 @@
+'''
+class
+- 객체 지향 프로그래밍의 핵심
+- 어떠한 객체의 변수, 메소드의 집합. 객체를 만들어내기 위한 틀
+- 구성요소 : 필드(멤버변수), 생성자, 메소드, 소멸자(c++, python)
+- 장점 : 간결성, 특정 함수 용이성(유지 보수 수월)
+
+* 용어 정리
+객체 : 현실세계에 있는 유형, 무형의 모든 대상
+인스턴스 : 클래스로 만든 메모리 객체(=객체의 실제화된 형태)
+          -> 동일한 클래스로부터 여러 인스턴스 생성 가능, 서로 다른 데이터 보유 가능
+필드 : 클래스의 특징 나타내는 변수, 객체 데이터 저장
+    * 파이썬에서 멤버 변수 선언 없이도 에러 없는 이유 : 동적 타이핑 특성 때문!
+      정적 타이핑 언어인 java, c++은 변수 명시 필수
+      ㄴ 동적 타이핑 : 코드 작성에 컴퓨터적 구조 생략 ex : 변수 선언에 데이터 타입 생략
+         정적 타이핑 : 코드 작성에 컴퓨터적 구조 명시 ex : 변수 선언에 데이터 타입 명시
+메소드 : 클래스가 지니는 기능
+생성자 : 인스턴스 생성 시 자동 호출되는 메소드
+'''
+
+class person:
+    name="";
+    age=0;
+    hobby="";
+    add="";
+    birth=""; # 멤버 변수(생략 가능)
+
+    # init : 외부에서 전달받은 값으로 해당 필드의 객체에 알맞게 자동 초기화
+    def __init__(self, name, age, hobby, add, birth): # 생성자
+        self.name=name;
+        self.age=age;
+        self.hobby=hobby;
+        self.add=add;
+        self.birth=birth;
+
+    # self : 클래스 속 메소드 정의할 때 첫 번째 인자로 사용, =인스턴스 자체(특정 객체 메모리 번지)
+    def info(self): # 메소드
+        print("name :", self.name);
+        print("age :", self.age);
+        print("hobby :", self.hobby);
+        print("add :", self.add);
+        print("birth :", self.birth);
+
+gini=person("gini", 20, "singing", "asdfgas", "030327");
+gini.info();
