@@ -1,0 +1,52 @@
+'''
+open API(application programming interface)
+API :응용프로그램에서 사용할 수 있도록 운영체제나 프로그래밍 언어가
+    제공하는 기능을 제어할 수 있게 만드는 인터페이스
+- 누구나 사용 가능하도록 공개된 api
+- 가격, 정보 등의 제한
+- 특정 서버에서의 기능을 이용할 수 있도록 공개한 프로그래밍 인터페이스
+- 서비스, 플랫폼의 범용성(ex : 네이버 지도), 실시간 업데이트 데이터 연계(ex : 날씨, 교통)
+
+rest API
+- 컴퓨터 간 인터넷을 통해 정보 안전하게 교환하기 위해 사용
+- JSON, XML 사용이 일반적
+- 자원을 이름으로 구분하여 자원의 상태 교환 및 crud(create read update delete)
+- http 표준 프로토콜 따르는 모든 플랫폼에서 사용 가능, 서버-클라이언트 분리 -> 안정성
+- 공식 표준 부재, 관리 설계 개발 비가용성, 비용
+'''
+
+# 네이버 검색 API를 이용하여 알고리즘 생성
+# 네이버 하단 -> 오픈 API -> 비로그인 방식 오픈 API -> 검색 참고
+import urllib.request # url을 열기 위한 확장 라이브러리
+import json
+from urllib.parse import quote
+search=quote(input("검색할 단어를 입력해주세요"));
+API_URL="https://openapi.naver.com/v1/search/blog.json?query="+search;
+request=urllib.request.Request(API_URL);
+Client_ID="bBIhRk1mFv9HbvnGRUWe";
+Client_Secret="oHwJuhgx3j";
+request.add_header("X-Naver-Client-Id", Client_ID);
+request.add_header("X-Naver-Client-Secret", Client_Secret);
+response=urllib.request.urlopen(request);
+rescode = response.getcode()
+if rescode==200:
+    '''
+    error 번호
+    200 : 요청 성공
+    400 : 요청 오류
+    404 : 페이지 불명
+    505 : 소스코드에 문제 발생
+    '''
+    response_body = response.read();
+    json_str=response_body.decode('utf-8')
+    data=json.loads(json_str);
+    data_parse=data['items'];
+    print(data_parse);
+    for i in data_parse:
+        print("=============");
+        print("제목 :", i['title']);
+        print("링크 :", i['bloggername']);
+        print("출판일자 :", i['postdate']);
+        print("=============");
+else:
+    print("Error code :",rescode)
