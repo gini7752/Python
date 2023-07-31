@@ -20,4 +20,5 @@
 ### day15 : class 상속
 ### day16 : open API
 ### day17 : 재귀함수, list 유형
-### day18 : linked list
+### day18 : 데이터 시각화
+
