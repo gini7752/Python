@@ -1,0 +1,56 @@
+'''
+재귀함수
+- 자신 안에서 자신을 또 호출하는 반복구조
+- 하나의 함수 실행 동안 다른 함수, 함수 자신 다시 호출 가능
+- 코드 간결화 가능
+- 스택이 쌓여 차례대로 값 반환 전까지 메모리 공간 차지하므로 메모리 과소비
+'''
+def Hello():
+    print("Hello world");
+    Hello();
+
+Hello();
+# RecursionError: maximum recursion depth exceeded while calling a Python object
+# 개체를 호출하는 동안 최대 재귀 깊이(1000회) 초과 -> 종료 조건 필수 명시
+
+# 시그마 for문
+num=int(input("숫자입력 : "));
+sum=0;
+for i in range(1,num+1):
+    sum+=i;
+print("합계1 :", sum);
+
+# 시그마 재귀함수
+def is_Sum(num):
+    if num == 1:
+        return 1;
+    return num+is_Sum(num-1);
+print("합계2 :", is_Sum(num));
+
+# 카운트다운 재귀함수
+def countdown(n):
+    if n == 0:
+        print("count end");
+    else:
+        print(n);
+        countdown(n-1);
+countdown(10);
+
+# 팩토리얼 재귀함수
+def factorial(n):
+    if n == 1:
+        return 1;
+    else:
+        return n*factorial((n-1));
+print(factorial(5));
+
+# 피보 재귀함수(**정처기 빈출문제**)
+def fibo(n):
+    if n < 2:
+        return 1;
+    else:
+        return fibo(n-1)+fibo(n-2);
+
+num = int(input("숫자입력 : "));
+for i in range(num + 1):
+    print(fibo(i), end=' ');
