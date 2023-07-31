@@ -1,0 +1,46 @@
+'''
+stack(스택)
+- LIFO(후입선출) : [1->4->5->2->3] => [3->2->5->4->1]
+- 삽입과 삭제 출입구 동일(물컵 생각)
+- 출력순서와 입력순서의 역순으로 진행
+스택 연산
+push : 스택 맨위 항목 삽입
+pop : 스택 맨위 항목 삭제
+peek or top : 스택 맨위(top) 표시
+isEmpty : 스택 비어있는지 확인
+isFull : 스택 차있는지 확인
+'''
+
+'''
+stack(스택)
+- LIFO(후입선출) : [1->4->5->2->3] => [3->2->5->4->1]
+- 삽입과 삭제 출입구 동일(물컵 생각)
+- 출력순서와 입력순서의 역순으로 진행
+스택 연산
+push : 스택 맨위 항목 삽입
+pop : 스택 맨위 항목 삭제
+peek or top : 스택 맨위(top) 표시
+isEmpty : 스택 비어있는지 확인
+isFull : 스택 차있는지 확인
+'''
+
+'''
+deque(데크)
+- 삽입과 삭제를 리스트 출입구 복수 공존(터널 생각)
+'''
+from collections import deque
+deque=deque();
+deque.append(1); # 항목 오른쪽 추가
+deque.append(2);
+deque.append(2);
+print(deque); # [1, , 2, 2]
+deque.appendleft(3); # 항목 왼쪽 추가
+print(deque); # [3, 1, 2, 2]
+print(deque.count(2)); # 항목 개수 조회
+print("================")
+deque.extend('hi'); # 정수형 외의 항목 오른쪽 추가
+print(deque); # [3, 1, 2, 2, 'hi']
+deque.clear(); # 항목 전체 삭제
+print(deque); # []
+
+** 파이썬 공식 홈페이지 파이썬 자습서 참고
