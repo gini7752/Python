@@ -1,0 +1,41 @@
+'''
+데이터 시각화
+- 데이터 분석 결과를 사용자가 쉽게 이해할 수 있도록 표현하여 전달
+- 전문 지식 없어도 누구나 쉽게 인지 및 사용 가능
+- 단순 텍스트 형식의 데이터에서 구분하기 힘든 정보 한눈에 파악 가능
+- matplotlib, seaborn, pyecharts, wordcloud
+'''
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+'''
+그래프
+plt.plot([1,2,3], [2,3,4], 'go--'); # 마커 지정(g:green, o:circle --:점선 연결)
+plt.plot([1,2,3],[4,4,4], '-', color='g', label='Solid');
+plt.plot([1,2,3],[3,3,3], '--', color='C0', label='Dashed');
+plt.plot([1,2,3],[2,2,2], ':', color='C1', label='Dotted');
+plt.plot([1,2,3],[1,1,1], '-.', color='red', label='Dash-dot'); # [x축 범위], [y축 범위], 선 옵션, 선 색, 선 이름
+plt.legend(loc='upper right', ncol=1); # 범례(위치, 칸 크기)
+plt.xlabel('x'); plt.ylabel('y'); # 축 라벨 지정
+plt.axis([0.8, 3.2, 0.5, 5.0]); # 축 범위 지정 = plt.xlim([0.8, 3.2]); plt.ylim([0.5, 5.0]);
+plt.show(); # 도표 시각화
+'''
+
+'''
+막대그래프
+y=[5,3,5,6,2,6,8,4];
+x=range(len(y));
+plt.barh(x, y, height=0.7, color='g');
+plt.show();
+'''
+
+'''
+산점도
+np.random.seed(0);
+n=50;
+x=np.random.rand(n);
+y=np.random.rand(n);
+plt.scatter(x,y);
+plt.show();
+'''
