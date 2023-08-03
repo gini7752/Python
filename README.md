@@ -3,7 +3,7 @@
 ## technical questions : stack overflow
 ## File->New project->File location setting->New Window
 ## coding practice : programmers, codeup, 백준
-### day 01 : 기초합수 1
+### day 01 : 기초함수 1
 ### day 02 : 기초함수 2
 ### day 03 : 제어, 서식 문자
 ### day 04 : collection
